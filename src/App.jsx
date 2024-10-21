@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import FeatureSection from "./components/FeatureSection";
-import Playground from "./components/Playground";
-import DragArea from "./components/DragArea";
+import FeatureSection from "./components/FeatureSection.jsx";
+import Playground from "./components/Playground.jsx";
+import DragArea from "./components/DragArea.jsx";
 
 function App() {
   const [images, setImages] = useState([]);
