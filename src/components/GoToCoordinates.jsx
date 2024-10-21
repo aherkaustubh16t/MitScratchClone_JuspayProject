@@ -6,7 +6,7 @@ function GoToCoordinates({ goToCoordinates, imageId }) {
 
   const handleGoTo = () => {
     if (xCoordinate !== "" && yCoordinate !== "" && imageId !== "") {
-      goToCoordinates(parseInt(imageId), xCoordinate, yCoordinate); // Use the input values for moving to coordinates
+      goToCoordinates(parseInt(imageId), xCoordinate, yCoordinate);
     } else {
       console.log("Invalid coordinates or Image ID");
     }

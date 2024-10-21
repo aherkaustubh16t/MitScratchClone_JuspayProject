@@ -5,12 +5,12 @@ function MoveXAxis({ updatePositionX, imageId, setInputValueX }) {
 
   const handleInputChangeX = (e) => {
     setInputValueXLocal(e.target.value);
-    setInputValueX(e.target.value); // Send the input value to the parent
+    setInputValueX(e.target.value);
   };
 
   const handleMoveX = () => {
     if (!isNaN(inputValueXLocal) && inputValueXLocal !== "" && imageId !== "") {
-      updatePositionX(parseInt(imageId), Number(inputValueXLocal)); // Use the input value for movement
+      updatePositionX(parseInt(imageId), Number(inputValueXLocal));
     } else {
       console.log("Invalid input for X-axis or Image ID");
     }

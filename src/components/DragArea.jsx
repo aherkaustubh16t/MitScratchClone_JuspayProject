@@ -8,7 +8,6 @@ function DragArea() {
     e.preventDefault();
     const featureData = JSON.parse(e.dataTransfer.getData("featureData"));
 
-    // Update the dropped features array with the new feature
     setDroppedFeatures([...droppedFeatures, featureData]);
   };
 
@@ -19,24 +18,23 @@ function DragArea() {
   const handleRun = () => {
     droppedFeatures.forEach((feature) => {
       if (feature.feature === "MoveX" && feature.inputValueX) {
-        moveX(feature.inputValueX); // Move along the X-axis
+        moveX(feature.inputValueX);
       } else if (feature.feature === "MoveY" && feature.inputValueY) {
-        moveY(feature.inputValueY); // Move along the Y-axis
+        moveY(feature.inputValueY);
       } else if (
         feature.feature === "RotateClockwise" &&
         feature.rotationValue
       ) {
-        rotateClockwise(feature.rotationValue); // Rotate clockwise
+        rotateClockwise(feature.rotationValue);
       } else if (
         feature.feature === "RotateAnticlockwise" &&
         feature.rotationValue
       ) {
-        rotateAnticlockwise(feature.rotationValue); // Rotate anticlockwise
+        rotateAnticlockwise(feature.rotationValue);
       }
     });
   };
 
-  // Functions to trigger movements and rotations (no animation)
   const moveX = (steps) => {
     console.log(`Moving X by ${steps}`);
   };
@@ -77,7 +75,6 @@ function DragArea() {
                 {featureData.feature}
               </div>
 
-              {/* Conditionally render data based on feature type */}
               {featureData.feature === "MoveX" && featureData.inputValueX && (
                 <div className="mb-2">
                   <strong>X-axis Move: </strong>

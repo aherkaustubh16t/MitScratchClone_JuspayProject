@@ -5,12 +5,12 @@ function RotateClockwise({ rotateClockwise, imageId, setRotationValue }) {
 
   const handleInputChange = (e) => {
     setDegree(e.target.value);
-    setRotationValue(e.target.value); // Send the input value to the parent
+    setRotationValue(e.target.value);
   };
 
   const handleRotate = () => {
     if (!isNaN(degree) && degree !== "" && imageId !== "") {
-      rotateClockwise(parseInt(imageId), Number(degree)); // Use the input value for clockwise rotation
+      rotateClockwise(parseInt(imageId), Number(degree));
     } else {
       console.log("Invalid input for rotation or Image ID");
     }

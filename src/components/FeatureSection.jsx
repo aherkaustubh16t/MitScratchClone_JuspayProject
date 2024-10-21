@@ -12,7 +12,6 @@ function FeatureSection({
   rotateAnticlockwise,
   goToCoordinates,
 }) {
-  // Drag start event handler
   const handleDragStart = (e, feature) => {
     let data = {
       feature,
@@ -21,39 +20,34 @@ function FeatureSection({
       rotationValue,
     };
 
-    e.dataTransfer.setData("featureData", JSON.stringify(data)); // Send feature data
+    e.dataTransfer.setData("featureData", JSON.stringify(data));
   };
 
-  const [inputValueX, setInputValueX] = useState(""); // State to store input value from MoveXAxis
-  const [inputValueY, setInputValueY] = useState(""); // State for input value of MoveYAxis
+  const [inputValueX, setInputValueX] = useState("");
+  const [inputValueY, setInputValueY] = useState("");
   const [rotationValue, setRotationValue] = useState("");
-  const [imageId, setImageId] = useState(""); // Add state for image ID
+  const [imageId, setImageId] = useState("");
 
-  const [activeFeature, setactiveFeature] = useState(null); //dragable use state
+  const [activeFeature, setactiveFeature] = useState(null);
 
-  // Function to handle the change in image ID
   const handleImageIdChange = (e) => {
     setImageId(e.target.value);
   };
 
-  // Function to handle the input value passed from the child
   const handleInputValueXChange = (value) => {
     setInputValueX(value); // Update the inputValueX state
   };
 
-  // Function to handle the input value passed from the child (for Y-axis)
   const handleInputValueYChange = (value) => {
     setInputValueY(value);
   };
 
-  // Function to handle the input value passed from the child (for Rotation)
   const handleRotationChange = (value) => {
     setRotationValue(value);
   };
 
   return (
     <div className="p-2">
-      {/* Input for Image ID */}
       <div className="mb-6">
         <label className="block text-lg font-semibold">
           Image ID (Id Starts from 1)
@@ -82,7 +76,6 @@ function FeatureSection({
       </div>
 
       <div draggable onDragStart={(e) => handleDragStart(e, "RotateClockwise")}>
-        {/* Rotate Buttons with Degree Input */}
         <RotateClockwise
           rotateClockwise={rotateClockwise}
           imageId={imageId}
@@ -105,7 +98,6 @@ function FeatureSection({
         draggable
         onDragStart={(e) => handleDragStart(e, "GoToCoordinates")}
       >
-        {/* Go to X, Y Coordinates */}
         <GoToCoordinates goToCoordinates={goToCoordinates} imageId={imageId} />
       </div>
     </div>

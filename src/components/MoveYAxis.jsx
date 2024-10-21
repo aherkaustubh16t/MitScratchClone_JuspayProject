@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 function MoveYAxis({ updatePositionY, imageId, setInputValueY }) {
-  const [inputValueYLocal, setInputValueYLocal] = useState(""); // Local state for the input field
+  const [inputValueYLocal, setInputValueYLocal] = useState("");
 
   const handleInputChangeY = (e) => {
     setInputValueYLocal(e.target.value);
-    setInputValueY(e.target.value); // Send the input value to the parent
+    setInputValueY(e.target.value);
   };
 
   const handleMoveY = () => {
     if (!isNaN(inputValueYLocal) && inputValueYLocal !== "" && imageId !== "") {
-      updatePositionY(parseInt(imageId), Number(inputValueYLocal)); // Use the input value for movement
+      updatePositionY(parseInt(imageId), Number(inputValueYLocal));
     } else {
       console.log("Invalid input for Y-axis or Image ID");
     }
