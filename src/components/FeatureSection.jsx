@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MoveXAxis from "./MoveXAxis";
 import MoveYAxis from "./MoveYAxis";
-import { RotateClockwise } from './RotateClockwise';
+import RotateClockwise from './RotateClockwise';
 import RotateAnticlockwise from "./RotateAnticlockwise";
 import GoToCoordinates from "./GoToCoordinates";
 
