@@ -33,7 +33,7 @@ function FeatureSection({
   };
 
   const handleInputValueXChange = (value) => {
-    setInputValueX(value); // Update the inputValueX state
+    setInputValueX(value);
   };
 
   const handleInputValueYChange = (value) => {
