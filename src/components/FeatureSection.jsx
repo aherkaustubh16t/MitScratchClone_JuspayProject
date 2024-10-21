@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import MoveXAxis from "./MoveXAxis.jsx";
-import MoveYAxis from "./MoveYAxis.jsx";
-import { RotateClockwise } from './RotateClockwise.jsx';
-import RotateAnticlockwise from "./RotateAnticlockwise.jsx";
-import GoToCoordinates from "./GoToCoordinates.jsx";
+import MoveXAxis from "./MoveXAxis";
+import MoveYAxis from "./MoveYAxis";
+import { RotateClockwise } from './RotateClockwise';
+import RotateAnticlockwise from "./RotateAnticlockwise";
+import GoToCoordinates from "./GoToCoordinates";
 
 function FeatureSection({
   updatePositionX,
