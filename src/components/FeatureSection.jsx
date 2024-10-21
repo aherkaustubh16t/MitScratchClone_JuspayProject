@@ -28,8 +28,6 @@ function FeatureSection({
   const [rotationValue, setRotationValue] = useState("");
   const [imageId, setImageId] = useState("");
 
-  const [activeFeature, setactiveFeature] = useState(null);
-
   const handleImageIdChange = (e) => {
     setImageId(e.target.value);
   };
